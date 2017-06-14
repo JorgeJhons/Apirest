@@ -1,5 +1,10 @@
 'use strict';
-app.controller('HomeController',function(){
+
+app.controller('HomeController',function(HomeFactory){
 	var vm=this;
-	console.log('Hola Mundo');
+	vm.users=[];
+
+	HomeFactory.getUsers().then(function(data){
+		console.log(data.data);
+	})
 });

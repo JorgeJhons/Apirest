@@ -6,5 +6,6 @@ app.controller('HomeController',function(HomeFactory){
 
 	HomeFactory.getUsers().then(function(data){
 		console.log(data.data);
+		vm.users=data.data;
 	})
 });
